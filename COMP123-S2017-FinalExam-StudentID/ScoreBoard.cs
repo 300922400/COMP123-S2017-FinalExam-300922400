@@ -8,7 +8,7 @@ using System.Windows.Forms;
  * Name: Nguyen Thi Kim Ngan
  * Date: July 25, 2017
  * Description: This is the ScordBoard class
- * Version: 0.1 - Create the ScordBoard class
+ * Version: 0.2 - Create the UpdateTime Method
  */
 namespace COMP123_S2017_FinalExam_StudentID
 {
@@ -94,6 +94,16 @@ namespace COMP123_S2017_FinalExam_StudentID
             TimeTextbox = timetextbox;
             Finalscoretextbox = finalScoretextbox;
         }
+        /// <summary>
+        /// This is UpdateTime method 
+        /// </summary>
        
+        public void UpdateTime()
+        {
+            int update;
+            update = Convert.ToInt32(TimeTextbox.Text) - 1;
+            Time = update;
+            TimeTextbox.Text = Time.ToString();
+        }
     }
 }
