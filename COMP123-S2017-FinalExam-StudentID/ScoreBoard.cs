@@ -16,9 +16,9 @@ namespace COMP123_S2017_FinalExam_StudentID
     {
         // private instance variables
         private TextBox _finalscoreTextbox;
-        private int Score;
+        private int _score;
         private TextBox _scoreTextbox;
-        private int time;
+        private int _time;
         private TextBox _timeTextbox;
 
         // public properties
@@ -33,6 +33,67 @@ namespace COMP123_S2017_FinalExam_StudentID
                 this._finalscoreTextbox = value;
             }
         }
+        public int Score
+        {
+            get
+            {
+                return this._score;
+            }
+            set
+            {
+                this._score = value;
+                Finalscoretextbox.Text = this._score.ToString();
+                ScoreTextbox.Text = this._score.ToString();
+            }
+        }
+        public TextBox ScoreTextbox
+        {
+            get
+            {
+                return this._scoreTextbox;
+            }
+            set
+            {
+                this._scoreTextbox = value;
+            }
+        }
+        public int Time
+        {
+            get
+            {
+                return this._time;
+            }
+            set
+            {
+                this._time = value;
+                TimeTextbox.Text = this._time.ToString();
+            }
 
+        }
+        public TextBox TimeTextbox
+        {
+            get
+            {
+                return this._timeTextbox;
+            }
+            set
+            {
+                this._timeTextbox = value;
+            }
+        }
+        /// <summary>
+        /// This is main constructor
+        /// having 3 parameteres as below
+        /// </summary>
+        /// <param name="scoretextbox"></param>
+        /// <param name="timetextbox"></param>
+        /// <param name="finalScoretextbox"></param>
+        public ScoreBoard( TextBox scoretextbox,TextBox timetextbox, TextBox finalScoretextbox)
+        {
+            ScoreTextbox = scoretextbox;
+            TimeTextbox = timetextbox;
+            Finalscoretextbox = finalScoretextbox;
+        }
+       
     }
 }
